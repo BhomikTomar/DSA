@@ -29,6 +29,8 @@ int main()
             cin>>nums[i];
         }
 
+        if(n==1) return nums[0];
+
         vector<int> temp1;
         vector<int> temp2;
 
@@ -37,7 +39,7 @@ int main()
             if(i!=n-1) temp2.push_back(nums[i]);
         }
 
-        cout<<max(f(temp1,n-1))
+        cout << max(f(temp1),f(temp2));
     }
     return 0;
 }
